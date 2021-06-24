@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-light bg-warning">
     <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">Navbar</span>
+        <span class="navbar-brand mb-0 h1"><img src="logo/station.png" style="width:44px"> <b style="font-weight:bolder;font-size:29px">Rail-Info</b></span>
     </div>
 </nav>
 
@@ -24,11 +24,11 @@
             <div>
                 <div class="card text-center">
                 <div class="card-header">
-                   <h2> Find Train Using Train Name </h2>
+                   <h2> Find Train Schedule Using Train Name </h2>
                 </div>
                 <div class="card-body">
                     <div class="card-title"><img  src="logo/train.png" style="width:64px"> </div>
-                    <p class="card-text"> <b> Find Train Using Train Name </b> </p>
+                    <p class="card-text"> <b>Find Train Schedule Using Train Name  </b> </p>
                     <a href="#" class="btn btn-danger btn-lg col-6 mx-auto" data-bs-toggle="modal" data-bs-target="#Modal1"><b>Go somewhere</b></a>
                 </div>
 
@@ -39,11 +39,11 @@
             <div>
                 <div class="card text-center">
                     <div class="card-header">
-                        <h2>Find Train Info Using Train No.  </h2>
+                        <h2>Find Your Train </h2>
                     </div>
                     <div class="card-body">
                         <div class="card-title"><img  src="logo/rail.png" style="width:64px"> </div>
-                        <p class="card-text"><b>Find Train Info Using Train No.</b></p>
+                        <p class="card-text"><b>Find Your Train Info Using Train No.</b></p>
                         <a href="#" class="btn btn-danger btn-lg col-6 mx-auto"><b>Search</b> </a>
                     </div>
 
@@ -93,18 +93,28 @@
 
 <!-- Modal section -->
 <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" >
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><b>Find Train Schedule</b></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                ...
+
+                <div class="row">
+
+
+                    <label><b>Enter Train Name:</b></label>
+                        <input type="text" class="form-control" id="name" placeholder="e.g Rajdhani"><br>
+                        <button id="search1" type="button" class="btn btn-primary col-6 mx-auto mt-3" ><b>Search</b></button>
+                </div>
+
+                <div id="display"></div>
+
+
             </div>
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
