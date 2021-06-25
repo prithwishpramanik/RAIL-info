@@ -1,3 +1,28 @@
 body{
-    background-color:#eeeeee;
+    background-color:#ffe8cf;
+}
+.navbar{
+    background-color:#f7a74f;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    border: 3px solid brown;
+}
+.h2, h2 {
+    font-size: 2rem;
+    font-family: 'Bree Serif', serif;
+}
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    background-color: #f7ba77;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
 }
