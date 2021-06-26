@@ -57,6 +57,11 @@ $(document).ready(function(){
 
                 }
             });
+            $("#name").each(function() {
+                this.value = "";
+            })
+
+
         }
 
 
@@ -159,6 +164,10 @@ console.log(number.length);
 
                 }
             });
+            $("#number").each(function() {
+                this.value = "";
+            })
+
         }
 
 
@@ -185,7 +194,7 @@ console.log(number.length);
 
             $.ajax(settings).done(function (response) {
 
-                console.log(response);
+
                 let blobpnr="";
 
 
@@ -223,6 +232,10 @@ console.log(number.length);
                 }
             });
         }
+        $("#pnr").each(function() {
+            this.value = "";
+        })
+
 
 
 
@@ -246,20 +259,19 @@ console.log(number.length);
             };
 
             $.ajax(settings).done(function (response) {
-                console.log(response);
 
-                let blobsts="";
+                try{let blobsts="";
 
 
-                for(let i=0;i<response.stations.length;i++){
+                    for(let i=0;i<response.stations.length;i++){
 
-                    blobsts =blobsts+`<tr>
+                        blobsts =blobsts+`<tr>
 <td>${response.stations[i].stationName}</td>
 <td>${response.stations[i].stationCode}</td>
 
 </tr>`;
 
-                    $('#displaysts').html(`<table class="table table-striped">
+                        $('#displaysts').html(`<table class="table table-striped">
                             <tr>
                             <th>Station Name</th>
                             <th>Station Code</th>
@@ -268,19 +280,28 @@ console.log(number.length);
 
                         </table>`
 
-                    )
+                        )
 
 
 
 
 
 
+                    }
+                }catch (e) {
+                    alert("error")
                 }
+
+                
 
             });
 
 
         }
+        $("#sts").each(function() {
+            this.value = "";
+        })
+
 
 
 
