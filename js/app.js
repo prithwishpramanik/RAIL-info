@@ -227,4 +227,62 @@ console.log(number.length);
 
 
     })
+    $('#search4').click(function(){
+        let sts=$('#sts').val();
+
+        if(sts.length<=0 ){
+            alert("enter S");
+        }else{
+
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://indianrailways.p.rapidapi.com/findstations.php?station="+sts,
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-key": "b4e4cf8c61msh5c770a3fe0f1d6cp147f47jsn55215babb77f",
+                    "x-rapidapi-host": "indianrailways.p.rapidapi.com"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+
+                let blobsts="";
+
+
+                for(let i=0;i<response.stations.length;i++){
+
+                    blobsts =blobsts+`<tr>
+<td>${response.stations[i].stationName}</td>
+<td>${response.stations[i].stationCode}</td>
+
+</tr>`;
+
+                    $('#displaysts').html(`<table class="table table-striped">
+                            <tr>
+                            <th>Station Name</th>
+                            <th>Station Code</th>
+                         </tr>
+                            ${blobsts}
+
+                        </table>`
+
+                    )
+
+
+
+
+
+
+                }
+
+            });
+
+
+        }
+
+
+
+    })
 });
