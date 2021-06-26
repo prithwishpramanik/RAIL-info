@@ -82,7 +82,7 @@
                         <div class="card-body">
                             <div class="card-title"><img  src="logo/train-station.png" style="width:64px"> </div>
                             <p class="card-text"><b>Find Station Code</b></p>
-                            <a href="#" class="btn btn-danger btn-lg col-6 mx-auto"><b>Search</b> </a>
+                            <a href="#" class="btn btn-danger btn-lg col-6 mx-auto" data-bs-toggle="modal" data-bs-target="#Modal4"><b>Search</b> </a>
                         </div>
 
                     </div>
@@ -160,12 +160,39 @@
                 <div class="row">
 
 
-                    <label><b>Enter Train Number:</b></label>
+                    <label><b>Enter PNR Number:</b></label>
                     <input type="number" class="form-control" id="pnr" placeholder="e.g 12235"><br>
                     <button id="search3" type="button" class="btn btn-primary col-6 mx-auto mt-3" ><b>Search</b></button>
                 </div>
 
                 <div id="displaypnr" style="margin-top:24px"></div>
+
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel4"><b>Find Your Station Details</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+
+
+                    <label><b>Enter Station Name:</b></label>
+                    <input type="text" class="form-control" id="sts" placeholder="e.g Howrah Jn."><br>
+                    <button id="search4" type="button" class="btn btn-primary col-6 mx-auto mt-3" ><b>Search</b></button>
+                </div>
+
+                <div id="displaysts" style="margin-top:24px"></div>
 
 
             </div>

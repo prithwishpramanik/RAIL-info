@@ -165,10 +165,10 @@ console.log(number.length);
 
     })//Details from Train Number//
     $('#search3').click(function(){
-        let name=$('#pnr').val();
+        let pnr=$('#pnr').val();
 
-        if(name.length<=0){
-            alert("enter something");
+        if(pnr.length<=0 ||pnr.length<=9 || pnr.length>10){
+            alert("enter valid PNR number");
         }else{
             const settings = {
                 "async": true,
@@ -180,7 +180,7 @@ console.log(number.length);
                     "x-rapidapi-host": "indianrailways.p.rapidapi.com"
                 },
                 "processData": false,
-                "data": "{\r\n    \"search\": \""+name+"\"\r\n}"
+                "data": "{\r\n    \"search\": \""+pnr+"\"\r\n}"
             };
 
             $.ajax(settings).done(function (response) {
