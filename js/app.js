@@ -263,11 +263,11 @@ console.log(number.length);
                 try{let blobsts="";
 
 
-                    for(let i=0;i<response.stations.length;i++){
+                    for(let i=0;i<response.data.length;i++){
 
                         blobsts =blobsts+`<tr>
-<td>${response.stations[i].stationName}</td>
-<td>${response.stations[i].stationCode}</td>
+<td>${response.data[i].name}</td>
+<td>${response.data[i].code}</td>
 
 </tr>`;
 
