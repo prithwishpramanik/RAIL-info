@@ -254,7 +254,7 @@ console.log(number.length);
                 "method": "GET",
                 "headers": {
                     'X-RapidAPI-Key': '4dec1617fbmshfc2739e1f387bc1p1ecb05jsncd387ad385d4',
-		             'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+		     'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
                 }
             };
 
