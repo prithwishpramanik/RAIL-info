@@ -250,11 +250,11 @@ console.log(number.length);
             const settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://indianrailways.p.rapidapi.com/findstations.php?station="+sts,
+                "url": "https://irctc1.p.rapidapi.com/api/v1/searchStation?query="+sts,
                 "method": "GET",
                 "headers": {
-                    "x-rapidapi-key": "b4e4cf8c61msh5c770a3fe0f1d6cp147f47jsn55215babb77f",
-                    "x-rapidapi-host": "indianrailways.p.rapidapi.com"
+                    'X-RapidAPI-Key': '4dec1617fbmshfc2739e1f387bc1p1ecb05jsncd387ad385d4',
+		             'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
                 }
             };
 
